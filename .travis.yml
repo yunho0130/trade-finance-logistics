@@ -13,6 +13,6 @@ deploy:
   api_key: ${OAUTH_TOKEN}
   file_glob: true
   file: ./dist/*
-  skip_cleanup: true
   on:
+    repo: yunho0130/trade-finance-logistics
     tags: true

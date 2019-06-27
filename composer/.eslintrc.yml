@@ -4,8 +4,7 @@ env:
 extends: 'eslint:recommended'
 parserOptions:
     ecmaVersion: 8
-    sourceType:
-        - script
+    sourceType: module
 globals:
     getFactory: true
     getSerializer: true
@@ -16,7 +15,7 @@ globals:
     emit: true
 rules:
     indent:
-        - error
+        - off
         - 4
     linebreak-style:
         - error
@@ -34,10 +33,10 @@ rules:
     curly: error
     eqeqeq: error
     no-throw-literal: error
-    strict: error
+    strict: off
     dot-notation: error
     no-tabs: error
-    no-trailing-spaces: error
+    no-trailing-spaces: off
     no-useless-call: error
     no-with: error
     operator-linebreak: error

@@ -459,6 +459,16 @@ describe('#' + namespace, () => {
         transaction.newValue = '60';
         businessNetworkConnection.submitTransaction(transaction).should.be.rejectedWith(/does not have .* access to resource/);
     });
+    it('Bob cannot submit a transaction for Alice\'s assets 2x', async () => {
+        // Use the identity for Bob.
+        await useIdentity(bobCardName);
+
+        // Submit the transaction.
+        const transaction = factory.newTransaction(namespace, 'SampleTransaction');
+        transaction.asset = factory.newRelationship(namespace, assetType, '1');
+        transaction.newValue = '120';
+        businessNetworkConnection.submitTransaction(transaction).should.be.rejectedWith(/does not have .* access to resource/);
+    });
 
 });
 

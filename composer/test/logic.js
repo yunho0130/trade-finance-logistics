@@ -166,7 +166,7 @@ describe('#' + namespace, () => {
      * @param {String} cardName The name of the card for the identity to use
      */
     async function useIdentity(cardName) {
-        await businessNetworkConnection.disconnect();
+        //await businessNetworkConnection.disconnect();
         businessNetworkConnection = new BusinessNetworkConnection({ cardStore: cardStore });
         events = [];
         businessNetworkConnection.on('event', (event) => {
@@ -461,3 +461,4 @@ describe('#' + namespace, () => {
     });
 
 });
+

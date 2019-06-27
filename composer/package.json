@@ -20,18 +20,21 @@
   "email": "ldesrosi@uk.ibm.com",
   "license": "Apache-2.0",
   "devDependencies": {
+    "chai": "latest",
+    "chai-as-promised": "latest",
     "composer-admin": "^0.19.1",
     "composer-cli": "^0.19.1",
     "composer-client": "^0.19.1",
     "composer-common": "^0.19.1",
     "composer-connector-embedded": "^0.19.1",
     "composer-cucumber-steps": "^0.19.1",
-    "chai": "latest",
-    "chai-as-promised": "latest",
     "cucumber": "^2.2.0",
-    "eslint": "latest",
-    "nyc": "latest",
+    "eslint": "^6.0.1",
     "mkdirp": "latest",
-    "mocha": "latest"
+    "mocha": "latest",
+    "nyc": "latest"
+  },
+  "dependencies": {
+    "acorn": "^6.1.1"
   }
 }
